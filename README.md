@@ -1,7 +1,7 @@
 # Important
-**This project is prohibited to use for commercial purposes!**<br>
-**禁止商业使用！**<br>
-**尤其是某些“十块钱学透深度学习”等所谓“教育机构”！**<br /><br>
+**This project is prohibited to use for commercial purposes! If needed, please contact me.**<br>
+**禁止商业使用！如有需要请联系作者。**<br>
+**尤其是中国大陆某些“十块钱学透深度学习”等所谓“教育机构”！**<br /><br>
 **For reprinting, please indicate the author's information**<br>
 **转载请注明作者信息，谢谢！**<br>
 **尤其是抖音（特别是中国大陆地区）、快手等短视频平台**<br>
@@ -21,12 +21,13 @@ For some projects with low performance requirements, I use CPU for calculation, 
 All the codes are confirmed to work on my computer.<br>
 |Item|Info|
 |:-:|:-:|
-|System|Windows 11 Build 25126|
+|System|Windows 11 Build 25126<br>Windows 2019 DataCenter|
 |CPU|AMD Ryzen7 2700X|
-|GPU|AMD Radeon RX580 8G|
-|Module|PyTorch|
-|Editor|Microsoft VS Code Insider|
-
+|GPU|AMD Radeon RX580 8G<br>Nvidia Tesla V100<br>Nvidia Tesla T4|
+|Python Version|Python 3.8 (dml)<br>Python 3.10 (cpu,cuda)|
+|PyTorch Version|PyTorch 1.8 (dml)<br>PyTorch 1.11 (cpu,cuda)|
+|IDE|Microsoft Visual Stuido Code - Insiders|
+*Please install [MiniConda](https://docs.conda.io/en/latest/miniconda.html) by yourself.
 
 # Devices
 Just modify ``torch.device("xxx")`` in the code.<br>
@@ -37,11 +38,11 @@ Just modify ``torch.device("xxx")`` in the code.<br>
 |Nvidia GPU|"cuda"|
 
 # Install PyTorch
-For Nvidia GPU/CPU user, go to this page: [Install PyTorch](https://pytorch.org/get-started/locally/).<br><br>
+*For Nvidia GPU/CPU, go to this page: [Install PyTorch](https://pytorch.org/get-started/locally/), install PyTorch as normal.<br><br>
 
 For AMD GPU, the directml only supports PyTorch 1.8, and Python 3.8.<br><br>
 ***DO NOT USE `"pip install pytorch"`**<br><br>
-The following command are all copied from Microsoft Docs.<br><br>
+The following command are all copied from [Microsoft Docs](https://docs.microsoft.com/zh-cn/windows/ai/directml/gpu-pytorch-windows).<br><br>
 `conda create --name pydml -y`<br>
 `conda activate pydml`<br>
 `conda install -c anaconda python=3.8 -y`<br>
@@ -60,9 +61,9 @@ For testing, use:<br>
 `tensor1 = torch.tensor([1]).to("dml")`<br>
 `tensor2 = torch.tensor([2]).to("dml")`<br>
 `dml_algebra = tensor1 + tensor2`<br>
-`dml_algebra.item()`<br>
+`dml_algebra.item()`<br><br>
 
-The output will be like this:<br>
+If installed well, the program will be like this:<br>
 >\>\>\> import torch<br>
 >\>\>\> tensor1 = torch.tensor([1]).to("dml")<br>
 >\>\>\> tensor2 = torch.tensor([2]).to("dml")<br>
@@ -73,12 +74,12 @@ The output will be like this:<br>
 # Notes
 |Learning Order|File Name|Notes|
 |:-:|:-:|:-:|
-|0|函数功能学习|Learning some basic operations of `torch.tensor`.|
+|0|BasicFunctions|Learning some basic operations of `torch.tensor`.|
 |1|线性回归|The most basic framework.|
 |2|FNN-MNIST|Add some functions, and try to recognize handwrite numbers.|
 |3|CNN-MNIST|Learn CNN (Convolutional Neural Networks)|
 |4|CNN-FashionMNIST|Apparel classification problem using CNN|
-|5|CNN-CIFAR10|Object Recognition Based on CNN VGG16 Model|
+|5|CNN-CIFAR10|(NOT FINISHED) Object Recognition Based on CNN VGG16 Model|
 
 # Contact
 Please contact me if you have any problems.<br>
@@ -86,4 +87,4 @@ Both emails are available, please make sure that emails sent from these two are 
 founder@imcwj.cn<br>
 imcwj@stu.ahau.edu.cn<br>
 I will reply you soon!<br>
-I'm Wenjun Chen, glad to communicate with you :)
+I'm Wenjun Chen, glad to chat with you :)
