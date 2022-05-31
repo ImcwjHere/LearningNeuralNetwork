@@ -27,6 +27,7 @@ All the codes are confirmed to work on my computer.<br>
 |Python Version|Python 3.8 (dml)<br>Python 3.10 (cpu,cuda)|
 |PyTorch Version|PyTorch 1.8 (dml)<br>PyTorch 1.11 (cpu,cuda)|
 |IDE|Microsoft Visual Stuido Code - Insiders|
+
 *Please install [MiniConda](https://docs.conda.io/en/latest/miniconda.html) by yourself.
 
 # Devices
