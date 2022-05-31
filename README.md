@@ -42,27 +42,31 @@ Just modify ``torch.device("xxx")`` in the code.<br>
 *For Nvidia GPU/CPU, go to this page: [Install PyTorch](https://pytorch.org/get-started/locally/), install PyTorch as normal.<br><br>
 
 For AMD GPU, the directml only supports PyTorch 1.8, and Python 3.8.<br><br>
-***DO NOT USE `"pip install pytorch"`**<br><br>
+***DO NOT USE `pip install pytorch`**<br><br>
 The following command are all copied from [Microsoft Docs](https://docs.microsoft.com/zh-cn/windows/ai/directml/gpu-pytorch-windows).<br><br>
-`conda create --name pydml -y`<br>
-`conda activate pydml`<br>
-`conda install -c anaconda python=3.8 -y`<br>
-`conda install -n pydml pandas -y`<br>
-`conda install -n pydml tensorboard -y`<br>
-`conda install -n pydml matplotlib -y`<br>
-`conda install -n pydml tqdm -y`<br>
-`conda install -n pydml pyyaml -y`<br>
-`pip install opencv-python`<br>
-`pip install wget`<br>
-`pip install torchvision==0.9.0`<br>
-`pip install pytorch-directml`<br>
+```bash
+conda create --name pydml -y
+conda activate pydml
+conda install -c anaconda python=3.8 -y
+conda install -n pydml pandas -y
+conda install -n pydml tensorboard -y
+conda install -n pydml matplotlib -y
+conda install -n pydml tqdm -y
+conda install -n pydml pyyaml -y
+pip install opencv-python
+pip install wget
+pip install torchvision==0.9.0
+pip install pytorch-directml
+```
 
-For testing, use:<br>
-`import torch`<br>
-`tensor1 = torch.tensor([1]).to("dml")`<br>
-`tensor2 = torch.tensor([2]).to("dml")`<br>
-`dml_algebra = tensor1 + tensor2`<br>
-`dml_algebra.item()`<br><br>
+For testing, use:
+```bash
+import torch
+tensor1 = torch.tensor([1]).to("dml")
+tensor2 = torch.tensor([2]).to("dml")
+dml_algebra = tensor1 + tensor2
+dml_algebra.item()
+```
 
 If installed well, the program will be like this:<br>
 >\>\>\> import torch<br>
